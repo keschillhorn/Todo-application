@@ -18,6 +18,10 @@ function App() {
     localStorage.setItem(LOCAl_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
 
+  useEffect(() => {
+    document.title = "Todo App";
+  }, []);
+
   function toggleTodo(id) {
     const newTodos = [...todos];
     const todo = newTodos.find((todo) => todo.id === id);
